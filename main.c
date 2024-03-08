@@ -9,9 +9,9 @@ int main(void)
   while (1)
   {
     // loop();
-    _delay_ms(200);
+    _delay_ms(1000);
     PORTD |= (1 << 3);
-    _delay_ms(200);
+    _delay_ms(1000);
     PORTD &= ~(1 << 3);
   }
 }

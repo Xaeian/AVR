@@ -1,5 +1,8 @@
 {
   "editor.formatOnSave": false,
   "editor.tabSize": 2,
-  "editor.mouseWheelZoom": true
+  "editor.mouseWheelZoom": true,
+  "files.associations": {
+    "io.h": "c"
+  }
 }
