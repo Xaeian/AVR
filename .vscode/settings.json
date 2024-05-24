@@ -3,6 +3,7 @@
   "editor.tabSize": 2,
   "editor.mouseWheelZoom": true,
   "files.associations": {
-    "io.h": "c"
+    "io.h": "c",
+    "delay.h": "c"
   }
 }
