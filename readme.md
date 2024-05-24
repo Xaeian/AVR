@@ -39,9 +39,6 @@ make --version
 
 ## Pierwszy program
 
-...
-
-
 Kompilacja i wgranie _(erase)_ projektu z pojedyńczym plikiem `main.c`
 
 ```bash
