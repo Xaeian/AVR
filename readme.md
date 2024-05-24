@@ -13,9 +13,9 @@ Mikrokontrolery wydane przez firmę Atmel nie są już aż tak popularne jak kie
 ## Co potrzebujemy?
 
 - Płytkę ze wbudowanym bootloaderem, na przykład Arduino, lub bez ale wówczas potrzebujemy zewnętrzny programator USBasp.
-- Kopilator języka C przygotowany specjalnie pod mikrokontrolery AVR jakim jest **WinAVR**. Po pobraniu/instalacji najlepiej umieścić go w lokalizacjai `C:\WinAVR`. 
-- Klient **GIT**, który uprości nam kwetie pobierania projektów startowych.
-- Edytor kodu IDE jakim jest **VSCode**. Formalnie się bez niego da obejść, jednak tanie narzędzie bywa niezmiernie pomocne. Wyłapuje więksozśc błędów, koloruje składnie oraz podpowiad podczas tworzenia kodu.
+- Kopilator języka C przygotowany specjalnie pod mikrokontrolery AVR jakim jest **WinAVR**. Po [pobraniu](https://sqrt.pl/WinAVR.zip)/[instalacji](https://winavr.sourceforge.net/download.html) najlepiej umieścić go w lokalizacjai `C:\WinAVR`.
+- [Klient **GIT**]https://git-scm.com/download/win, który rozwiąże kwestie tworzenia nowego/czystego projektu z szablonu, który stanowi zawartość tego repozytorium.
+- Edytor kodu **IDE** jakim jest **VSCode**. Formalnie się bez niego da obejść, jednak tanie narzędzie bywa niezmiernie pomocne. Wyłapuje więksozśc błędów, koloruje składnie oraz podpowiad podczas tworzenia kodu.
 - Narzędzia do zarządzania procesem kompilacji programów, jakim jest [**Make**](https://www.gnu.org/software/make/) Aby zainstalować **Make**, można skorzystać z menedżera pakietów [**Chocolatey**](https://chocolatey.org/), który umożliwia prostą instalację wymaganych komponentów. Wystarczy otworzyć **PowerShell** jako 🛡️administrator i wywołać komendy:
 
 ```
@@ -25,7 +25,7 @@ choco install make
 
 Instalacja **Make** automatycznie utworzy zmienną systemową, jednak w przypadku pozostałych programów konieczne będzie ręczne ich utworzenie.
 
-🪟 Run » `sysdm.cpl` » Advanced » **Environment Variables**
+🪟 `Win` + `R` » `sysdm.cpl` » Advanced » **Environment Variables**
 
 - Path » `C:\WinAVR\bin`
 
