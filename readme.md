@@ -16,7 +16,7 @@ Mikrokontrolery wydane przez firmę Atmel nie są już aż tak popularne jak kie
 - Kopilator języka C przygotowany specjalnie pod mikrokontrolery AVR jakim jest **WinAVR**. Po [pobraniu](https://sqrt.pl/WinAVR.zip)/[instalacji](https://winavr.sourceforge.net/download.html) najlepiej umieścić go w lokalizacjai `C:\WinAVR`.
 - [Klient **GIT**](https://git-scm.com/download/win), który rozwiąże kwestie tworzenia nowego/czystego projektu z szablonu, który stanowi zawartość tego repozytorium.
 - Edytor kodu **IDE**, tak jak **VSCode**. Chociaż formalnie można obejść się bez niego, to narzędzie bywa niezmiernie pomocne. Wyłapuje większość błędów, koloruje składnię oraz podpowiada podczas tworzenia kodu.
-- Narzędzia do zarządzania procesem kompilacji programów, jakim jest [**Make**](https://www.gnu.org/software/make/) Aby zainstalować **Make**, można skorzystać z menedżera pakietów [**Chocolatey**](https://chocolatey.org/), który umożliwia prostą instalację wymaganych komponentów. Wystarczy otworzyć **PowerShell** jako 🛡️administrator i wywołać komendy:
+- Narzędzia do zarządzania procesem kompilacji programów, jakim jest [**Make**](https://www.gnu.org/software/make/). Aby zainstalować **Make**, można skorzystać z menedżera pakietów [**Chocolatey**](https://chocolatey.org/), który umożliwia prostą instalację wymaganych komponentów. Wystarczy otworzyć **PowerShell** jako 🛡️administrator i wywołać komendy:
 
 ```
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
@@ -42,6 +42,8 @@ make --version
 ```
 
 Korzystając z **USBAsp**, należy zainstalować odpowiedni sterownik dla systemu Windows. Można to zrobić za pomocą [programu **Zadig**](https://zadig.akeo.ie/). Z listy urządzeń wybierz USBAsp. Jeśli urządzenie nie jest widoczne, wejdź w **_Options_** i zaznacz **_List All Devices_**. Następnie wybierz USBAsp, wybierz sterownik `libusb-win32` i zainstaluj go.
+
+![Zadig](https://sqrt.pl/img/zadig.png)
 
 ## 🔥 Compile and burn
 
