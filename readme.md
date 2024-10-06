@@ -23,11 +23,14 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 choco install make
 ```
 
-Instalacja **Make** automatycznie utworzy zmienną systemową, jednak w przypadku pozostałych programów konieczne będzie ręczne ich utworzenie.
+W przypadku problemów z instalacją **Choco**, aplikację **Make** można [pobrać bezpośrednio](https://sqrt.pl/Make.zip). Następnie jej zawartość można umieścić w folderze `C:\Make`.
+
+Instalacja **Make** za pomocą **Choco** automatycznie utworzy zmienną systemową, jednak w przypadku pozostałych programów konieczne będzie ręczne ich utworzenie.
 
 🪟 `Win` + `R` » `sysdm.cpl` » Advanced » **Environment Variables**
 
 - Path » `C:\WinAVR\bin`
+- Path » `C:\Make\bin`
 
 Na zakończenie należy otworzyć konsolę i zweryfikować, czy wszystkie pakiety zostały zainstalowane poprawnie. Można to zrobić przy użyciu komendy `--version`.
 
@@ -37,6 +40,8 @@ avr-objcopy --version
 avrdude -v
 make --version
 ```
+
+Korzystając z **USBAsp**, należy zainstalować odpowiedni sterownik dla systemu Windows. Można to zrobić za pomocą [programu **Zadig**](https://zadig.akeo.ie/). Z listy urządzeń wybierz USBAsp. Jeśli urządzenie nie jest widoczne, wejdź w **_Options_** i zaznacz **_List All Devices_**. Następnie wybierz USBAsp, wybierz sterownik `libusb-win32` i zainstaluj go.
 
 ## 🔥 Compile and burn
 
