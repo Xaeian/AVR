@@ -88,4 +88,4 @@ avrdude -c usbasp -p m328p -U lfuse:w:0xFF:m -U hfuse:w:0xD9:m -U efuse:w:0xFF:m
 avrdude -c usbasp -p m328p -U lfuse:w:0xE2:m -U hfuse:w:0xD9:m -U efuse:w:0xFF:m
 ```
 
-Oraz wprowadzić w pliku `makefile` odpowiednią zmianę 🙂
+Pamiętaj, aby zmienić definicję częstotliwości `F_CPU` w pliku `makefile`, jeśli jest inna niż **16MHz**. W przeciwnym razie funkcja `_delay_ms()` oraz inne funkcje czasowe wykorzystujące tę definicję będą niepoprawnie odmierzać czas ⌛.
