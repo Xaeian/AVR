@@ -79,4 +79,13 @@ Proces ten już wydaje się skomplikowany, a stanie się jeszcze bardziej ucią�
 make
 ```
 
-Jednorazowo trzeba umieścić listę plików `.c` w zmiennej `SRC` oraz listę folderów z plikami nagłówkowymi `.h` w zmiennej `INC`, ale to niewielka cena za automatyzację kompilacji i wgrywania programu 🙂
+Jednorazowo trzeba umieścić listę plików `.c` w zmiennej `SRC` oraz listę folderów z plikami nagłówkowymi `.h` w zmiennej `INC`. Trzeba zwrócić uwagę na ustawienie **16MHz**: `-DF_CPU=16000000UL`, które informuje kompilator, z jaką częstotliwością pracuje nasz mikrokontroler. To ustawienie jest kompatybilne z płytkami Arduino, które są wyposażone w taki właśnie oscylator kwarcowy. Jednak po zakupie nowych mikrokontrolerów **ATmega328P** domyślnie pracują one z częstotliwością `1MHz`, korzystając z wewnętrznego oscylatora RC. Warto zmienić ich ustawienia na pracę z zewnętrznym rezonatorem kwarcowym albo wyłączyć preskaler, co zwiększy częstotliwość wewnętrznego oscylatora do `8MHz`. Można to zrobić za pomocą programu `avrdude`:
+
+```bash
+# External crystal resonator
+avrdude -c usbasp -p m328p -U lfuse:w:0xFF:m -U hfuse:w:0xD9:m -U efuse:w:0xFF:m
+# Internal RC oscillator
+avrdude -c usbasp -p m328p -U lfuse:w:0xE2:m -U hfuse:w:0xD9:m -U efuse:w:0xFF:m
+```
+
+Oraz wprowadzić w pliku `makefile` odpowiednią zmianę 🙂
