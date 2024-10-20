@@ -73,7 +73,7 @@ W przypadku **USBasp** komenta `avrdude` będzie wyglądać tak:
 avrdude -c usbasp -p ATMEGA328P -U flash:w:main.hex
 ```
 
-Proces ten już wydaje się skomplikowany, a stanie się jeszcze bardziej uciążliwy, gdy nasz projekt będzie się rozrastał. Aby go zautomatyzować, użyjemy narzędzia `make`, które dzięki konfiguracji zawartej w pliku `makefile` zrobi wszystko automatycznie. Wystarczy wpisać w konsoli:
+Proces ten już teraz wydaje się skomplikowany, a stanie się jeszcze bardziej uciążliwy wraz z rozwojem projektu i wzrostem liczby plików. Aby go zautomatyzować, użyjemy narzędzia `make`, które dzięki konfiguracji zawartej w pliku `makefile` zrobi wszystko automatycznie. Wystarczy wpisać w konsoli:
 
 ```sh
 make

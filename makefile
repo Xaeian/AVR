@@ -1,5 +1,5 @@
 NAME = blinky
-SERIAL = COM8
+SERIAL = COM3
 ARDUINO = -F -V -c arduino -P $(SERIAL) -b 115200
 USBASP = avrdude -c usbasp
 
