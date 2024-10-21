@@ -25,7 +25,7 @@ choco install make
 
 W przypadku problemów z instalacją **Choco**, aplikację **Make** można [pobrać bezpośrednio](https://sqrt.pl/Make.zip). Następnie jej zawartość można umieścić w folderze `C:\Make`.
 
-Instalacja **Make** za pomocą **Choco** automatycznie utworzy zmienną systemową, jednak w przypadku pozostałych programów konieczne będzie ręczne ich utworzenie.
+Instalacja **Make** za pomocą **Choco** automatycznie utworzy zmienną systemową, jednak w pozostałych przypadkach konieczne będzie ręczne ich utworzenie.
 
 🪟 `Win` + `R` » `sysdm.cpl` » Advanced » **Environment Variables**
 
@@ -64,7 +64,7 @@ avr-objcopy -O ihex -R .eeprom main.elf main.hex
 Następnie należy zaprogramować mikrokontroler, czyli wgrać plik wsadowy do jego pamięci. Dokładniej mówiąc, musimy wgrać nasz plik `.hex` do dedykowanego sektoru pamięci FLASH mikrokontrolera. Komenda ta będzie różniła się w zależności od programatora. Pracując z **Arduino** lub inną płytką z bootloaderem _(gdzie należy zwrócić uwagę na **port COM**, który system przydzielił naszemu urządzeniu)_, komenda `avrdude` będzie wyglądać następująco:
 
 ```sh
-avrdude -F -V -c arduino -P COM8 -b 115200 -p ATMEGA328P -U flash:w:main.hex
+avrdude -F -V -c arduino -P COM3 -b 115200 -p ATMEGA328P -U flash:w:main.hex
 ```
 
 W przypadku **USBasp** komenta `avrdude` będzie wyglądać tak:
