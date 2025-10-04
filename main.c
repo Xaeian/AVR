@@ -6,7 +6,7 @@ int main(void)
   // init();
   DDRD |= (1 << 3); // PD3 Output
 
-  while (1)
+  while(1)
   {
     // loop();
     _delay_ms(200);
