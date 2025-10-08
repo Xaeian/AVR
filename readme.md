@@ -25,12 +25,12 @@ choco install make
 
 W przypadku problemów z instalacją **Choco**, aplikację **Make** można [pobrać bezpośrednio](https://sqrt.pl/Make.zip). Następnie jej zawartość można umieścić w folderze `C:\Make`.
 
-Instalacja **Make** za pomocą **Choco** automatycznie utworzy zmienną systemową, jednak w pozostałych przypadkach konieczne będzie ręczne ich utworzenie.
+Instalacja **Make** za pomocą **Choco** automatycznie dodaje odpowiednią ścieżkę do zmiennej systemowej. W pozostałych przypadkach należy ręcznie dodać ścieżkę do zmiennej systemowej `Path`. _Nie tworzymy nowej zmiennej systemowej ani nie nadpisujemy istniejących wpisów!_
 
 🪟 `Win` + `R` » `sysdm.cpl` » Advanced » **Environment Variables**
 
-- Path » `C:\WinAVR\bin`
-- Path » `C:\Make\bin`
+- 🖱️`Path` » 🆕`C:\WinAVR\bin`
+- 🖱️`Path` » 🆕`C:\Make\bin`
 
 Na zakończenie należy otworzyć konsolę i zweryfikować, czy wszystkie pakiety zostały zainstalowane poprawnie. Można to zrobić przy użyciu komendy `--version`.
 
