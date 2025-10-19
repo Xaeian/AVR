@@ -7,8 +7,11 @@ Kurs programowania procesorów **AVR** na przykładzie mikrokontrolera **Atmega3
 Mikrokontrolery wydane przez firmę Atmel nie są już aż tak popularne jak kiedyś i są powolutku wypierane. Jednak w mojej opinii taka Atmega jest lepszym procesorem na początek samodzielnej nauki niż zaawansowany STM32.
 
 - Mamy ją w obudowie **DIP28** THT, więc możemy sobie na płytce stykowej wszystko sami poogarniać
-- W sieci i literaturze można znaleźć masę przykładów i materiałów dotyczących tych mikrokontrolerów, z których zdecydowana większość dotyczy scalaków Atmega8A, Atmega32A oraz Atmega328P
+- W sieci i literaturze można znaleźć masę przykładów i materiałów dotyczących tych mikrokontrolerów, z których zdecydowana większość dotyczy scalaków Atmega8A, Atmega32A oraz **Atmega328P**
+- W bardziej zaawansowanych konstrukcjach, jak STM32, przykłady i kursy często opierają się na warstwie abstrakcji i gotowych bibliotekach, co pozwala szybko osiągnąć efekt, ale jednocześnie zniechęca do zrozumienia faktycznego działania układu i utrudnia budowanie solidnych fundamentów wiedzy.
 - Mała różnorodność wykorzystywanych układów oraz niewielka ilość peryferiów i ich prostota, która w rozwiązaniach rynkowych jest dużym ograniczeniem, tutaj przekłada się na spójność przykładów. Jeden UART, niewielkie możliwości konfiguracji - wystarczy podłączyć i działa.
+
+![ATmega328P](http://sqrt.pl/img/atmega328p.png)
 
 ## 📦 Co potrzebujemy?
 
