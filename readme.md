@@ -8,10 +8,12 @@ Mikrokontrolery wydane przez firmę Atmel nie są już aż tak popularne jak kie
 
 - Mamy ją w obudowie **DIP28** THT, więc możemy sobie na płytce stykowej wszystko sami poogarniać
 - W sieci i literaturze można znaleźć masę przykładów i materiałów dotyczących tych mikrokontrolerów, z których zdecydowana większość dotyczy scalaków Atmega8A, Atmega32A oraz **Atmega328P**
-- W bardziej zaawansowanych konstrukcjach, jak STM32, przykłady i kursy często opierają się na warstwie abstrakcji i gotowych bibliotekach, co pozwala szybko osiągnąć efekt, ale jednocześnie zniechęca do zrozumienia faktycznego działania układu i utrudnia budowanie solidnych fundamentów wiedzy.
-- Mała różnorodność wykorzystywanych układów oraz niewielka ilość peryferiów i ich prostota, która w rozwiązaniach rynkowych jest dużym ograniczeniem, tutaj przekłada się na spójność przykładów. Jeden UART, niewielkie możliwości konfiguracji - wystarczy podłączyć i działa.
+- W bardziej zaawansowanych konstrukcjach, jak STM32, przykłady i kursy często opierają się na warstwie abstrakcji i gotowych bibliotekach, co pozwala szybko osiągnąć efekt, ale jednocześnie zniechęca do zrozumienia faktycznego działania układu i sterowania poprzez rejestry, co w rezultacie utrudnia budowanie solidnych fundamentów wiedzy.
+- Symulatory Atmega328P są dopracowane, można pracować bez sprzętu, a kod przenosi się prawie 1:1 na hardware. AI rzadko myli się w prostym kodzie AVR, więc jest duża szansa, że wygenerowany kod zadziała od razu.
+- [Datasheet Atmega328P](assets/atmega328p-datasheet.pdf) ma **200 stron**, więc poznanie całej architektury zajmie relatywnie mało czasu. To pozwala szybciej przyswajać nowe architektury. Peryferia są te same, tylko bardziej rozbudowane.
+- Mała różnorodność wykorzystywanych peryferiów i ich prostota, która w rozwiązaniach rynkowych jest dużym ograniczeniem, tutaj przekłada się na spójność przykładów. Jeden UART, niewielkie możliwości konfiguracji - wystarczy podłączyć i działa.
 
-![ATmega328P](http://sqrt.pl/img/atmega328p.png)
+![ATmega328P](assets/atmega328p-pinout.png)
 
 ## 📦 Co potrzebujemy?
 
@@ -46,7 +48,7 @@ make --version
 
 Korzystając z **USBAsp**, należy zainstalować odpowiedni sterownik dla systemu Windows. Można to zrobić za pomocą [programu **Zadig**](https://zadig.akeo.ie/). Z listy urządzeń wybierz USBAsp. Jeśli urządzenie nie jest widoczne, wejdź w **_Options_** i zaznacz **_List All Devices_**. Następnie wybierz USBAsp, wybierz sterownik `libusb-win32` i zainstaluj go klikając **Upgrade Driver**:
 
-![Zadig](https://sqrt.pl/img/zadig.png)
+![Zadig](assets/zadig-usbasp.png)
 
 ## 🔥 Compile and burn
 
