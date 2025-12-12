@@ -9,9 +9,11 @@ Mikrokontrolery wydane przez firmę Atmel nie są już aż tak popularne jak kie
 - Mamy ją w obudowie **DIP28** THT, więc możemy sobie na płytce stykowej wszystko sami poogarniać
 - W sieci i literaturze można znaleźć masę przykładów i materiałów dotyczących tych mikrokontrolerów, z których zdecydowana większość dotyczy scalaków Atmega8A, Atmega32A oraz **Atmega328P**
 - W bardziej zaawansowanych konstrukcjach, jak STM32, przykłady i kursy często opierają się na warstwie abstrakcji i gotowych bibliotekach, co pozwala szybko osiągnąć efekt, ale jednocześnie zniechęca do zrozumienia faktycznego działania układu i sterowania poprzez rejestry, co w rezultacie utrudnia budowanie solidnych fundamentów wiedzy.
-- Symulatory Atmega328P są dopracowane, można pracować bez sprzętu, a kod przenosi się prawie 1:1 na hardware. AI rzadko myli się w prostym kodzie AVR, więc jest duża szansa, że wygenerowany kod zadziała od razu.
 - [Datasheet Atmega328P](assets/atmega328p-datasheet.pdf) ma **200 stron**, więc poznanie całej architektury zajmie relatywnie mało czasu. To pozwala szybciej przyswajać nowe architektury. Peryferia są te same, tylko bardziej rozbudowane.
 - Mała różnorodność wykorzystywanych peryferiów i ich prostota, która w rozwiązaniach rynkowych jest dużym ograniczeniem, tutaj przekłada się na spójność przykładów. Jeden UART, niewielkie możliwości konfiguracji - wystarczy podłączyć i działa.
+- Układ ATmega328P jest na tyle prosty i popularny, że:
+  - **Emulatory** są dobrze dopracowane i można pracować bez sprzętu, a kod przenieść później na mikrokontroler
+  - **Modele językowe** generują niemal bezbłędny kod.
 
 ![ATmega328P](assets/atmega328p-pinout.png)
 
