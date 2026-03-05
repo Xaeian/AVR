@@ -23,16 +23,16 @@ Mikrokontrolery wydane przez firmę Atmel nie są już aż tak popularne jak kie
 - Kopilator języka C przygotowany specjalnie pod mikrokontrolery AVR jakim jest **WinAVR**. Po [pobraniu](https://sqrt.pl/WinAVR.zip)/[instalacji](https://winavr.sourceforge.net/download.html) najlepiej umieścić go w lokalizacjai `C:\WinAVR`.
 - [Klient **GIT**](https://git-scm.com/download/win), który rozwiąże kwestie tworzenia nowego/czystego projektu z szablonu, który stanowi zawartość tego repozytorium.
 - Edytor kodu **IDE**, tak jak [**VSCode**](https://code.visualstudio.com/). Chociaż formalnie można obejść się bez niego, to narzędzie bywa niezmiernie pomocne. Wyłapuje większość błędów, koloruje składnię oraz podpowiada podczas tworzenia kodu.
-- Narzędzia do zarządzania procesem kompilacji programów, jakim jest [**Make**](https://www.gnu.org/software/make/). Aby zainstalować **Make**, można skorzystać z menedżera pakietów [**Chocolatey**](https://chocolatey.org/), który umożliwia prostą instalację wymaganych komponentów. Wystarczy otworzyć **PowerShell** jako 🛡️administrator i wywołać komendy:
+- Narzędzia do zarządzania procesem kompilacji programów, jakim jest [**Make**](https://www.gnu.org/software/make/). Aby zainstalować **Make**, można skorzystać z wbudowanego menedżera pakietów [**winget**](https://learn.microsoft.com/en-us/windows/package-manager/winget/). Wystarczy otworzyć konsolę i wywołać komendę:
 
 ```
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-choco install make
+winget source update
+winget install -e --id GnuWin32.Make
 ```
 
-W przypadku problemów z instalacją **Choco**, aplikację **Make** można [pobrać bezpośrednio](https://sqrt.pl/Make.zip). Następnie jej zawartość można umieścić w folderze `C:\Make`.
+W przypadku problemów z instalacją przez **winget**, aplikację **Make** można [pobrać bezpośrednio](https://sqrt.pl/Make.zip). Następnie jej zawartość można umieścić w folderze `C:\Make`.
 
-Instalacja **Make** za pomocą **Choco** automatycznie dodaje odpowiednią ścieżkę do zmiennej systemowej. W pozostałych przypadkach należy ręcznie dodać ścieżkę do zmiennej systemowej `Path`. _Nie tworzymy nowej zmiennej systemowej ani nie nadpisujemy istniejących wpisów!_
+Instalacja **Make** za pomocą **winget** umieszcza pliki w lokalizacji `C:\Program Files (x86)\GnuWin32\bin`. W pozostałych przypadkach należy ręcznie dodać ścieżkę do zmiennej systemowej `Path`. _Nie tworzymy nowej zmiennej systemowej ani nie nadpisujemy istniejących wpisów!_
 
 🪟 `Win` + `R` » `sysdm.cpl` » Advanced » **Environment Variables**
 
@@ -40,7 +40,6 @@ Instalacja **Make** za pomocą **Choco** automatycznie dodaje odpowiednią ście
 - 🖱️`Path` » 🆕`C:\Make\bin`
 
 Na zakończenie należy otworzyć konsolę i zweryfikować, czy wszystkie pakiety zostały zainstalowane poprawnie. Można to zrobić przy użyciu komendy `--version`.
-
 ```sh
 avr-gcc --version
 avr-objcopy --version
